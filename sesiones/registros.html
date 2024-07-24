@@ -1,0 +1,45 @@
+<!DOCTYPE HTML><html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+  <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
+  <title>[Vikingo] Sesiones de la cátedras</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <table id="comun" class="table table-striped table-sm">
+      <tr>
+        <td colspan="4" class="text-center">[Vikingo] Software para administrar los programas analíticos y hacerles su seguimiento</td>
+      </tr>
+      <tr>
+        <td><a href="../../prog/menu/docente.php">Menú principal</a></td>
+        <td class="text-center">Identificación: {usuarionombre}</td>
+        <td class="text-center">Rol: {rolnombre}</td>
+        <td class="text-end"><a href='../../prog/menu/cerrarsesion.php'>Cerrar sesión</a></td>
+      </tr>
+    </table>
+    <h1>Sesiones de {catedranombre} [{periodo}]</h1>
+    <a href="{rutaprog}iniciar.php?catedra={catedra}&op=3" class="btn btn-success" style="margin-right: 10px;">Adicionar</a>
+    <br><br>
+    <table id="table" class="table table-striped table-bordered table-hover table-sm" >
+      <thead>
+      <tr>
+        <th class='col-md-auto'>Descripción</th>
+        <th class='col-md-auto'>Acción</th>
+      </tr>
+      </thead>
+      {Datos}
+    </table>
+    <div class="row">
+      <div class="col">
+        <nav>
+          <ul class="pagination">
+            <li class="page-item"><a href="../../prog/catedraseditadocente/menuedita.php?catedra={catedra}" class="page-link">&larr; Retornar</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

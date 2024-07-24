@@ -1,0 +1,60 @@
+<!DOCTYPE HTML><html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+	<script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" href="../../trumbowyg/ui/trumbowyg.min.css">
+	<script src="../../jquery-3.7.0.min.js"></script>
+	<title>[Vikingo] Sesiones</title>
+</head>
+<body>
+	<div class="container-fluid">
+		<table id="comun" class="table table-striped table-sm">
+			<tr>
+				<td colspan="4" class="text-center">[Vikingo] Software para administrar los programas analíticos y hacerles su seguimiento</td>
+			</tr>
+			<tr>
+				<td><a href="../../prog/menu/docente.php">Menú principal</a></td>
+				<td class="text-center">Identificación: {usuarionombre}</td>
+				<td class="text-center">Rol: {rolnombre}</td>
+				<td class="text-end"><a href='../../prog/menu/cerrarsesion.php'>Cerrar sesión</a></td>
+			</tr>
+		</table>
+		<div class="row">
+			<div class="col">
+				<h1>Detalles de la sesión de {catedranombre} [{periodo}]</h1>
+				<a href='{rutaprog}iniciar.php?op=0&sesion={sesionc}' class='btn btn-info' style="margin-right: 10px;">Actualizar</a>
+				<a href='{rutaprog}iniciar.php?op=1&sesion={sesionc}' class='btn btn-danger' style="margin-right: 10px;">Borrar</a>
+				<br><br>
+				<table class="table table-striped table-bordered table-hover table-sm">
+					<thead>
+						<tr><th class="col-md-2">Atributo</th><th>Valor</th></tr>
+					</thead>
+					<tr><td>Descripción</td><td>{nombre}</td></tr>
+					<tr><td>Unidades estudiadas</td><td>{unidades}</td></tr>
+					<tr><td>Actividades presenciales</td><td><textarea name="presencial" id="presencial">{presencial}</textarea></td></tr>
+					<tr><td>Número de horas presenciales</td><td>{presencialhoras}</td></tr>
+					<tr><td>Actividades independientes</td><td><textarea name="independiente" id="independiente">{independiente}</textarea></td></tr>
+					<tr><td>Número de horas independientes</td><td>{independientehoras}</td></tr>
+					<tr><td>Materiales de Apoyo / Recursos TIC / Recursos Pedagógicos</td><td><textarea name="recursos" id="recursos">{recursos}</textarea></td></tr>
+					<tr><td>Resultados de aprendizaje</td><td>{resultados}</td></tr>
+				</table>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<nav>
+					<ul class="pagination">
+						<li class="page-item"><a href="{rutaprog}registros.php?catedra={catedra}" class="page-link">&larr; Retornar</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<script src="../../trumbowyg/trumbowyg.min.js"></script>
+	<script src="../../trumbowyg/langs/es.min.js"></script>
+	<script>$('#presencial').trumbowyg({ lang: 'es', disabled: true});</script>
+	<script>$('#independiente').trumbowyg({ lang: 'es', disabled: true});</script>
+	<script>$('#recursos').trumbowyg({ lang: 'es', disabled: true});</script>
+</body></html>
