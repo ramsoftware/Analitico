@@ -1,0 +1,61 @@
+<!DOCTYPE HTML><html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+	<script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
+	<title>[Vikingo] Cátedras</title>
+</head>
+<body>
+	<div class="container-fluid">
+		<table id="comun" class="table table-striped table-sm">
+			<tr>
+				<td colspan="4" class="text-center">[Vikingo] Software para administrar los programas analíticos y hacerles su seguimiento</td>
+			</tr>
+			<tr>
+				<td><a href="../../prog/menu/comite.php">Menú principal</a></td>
+				<td class="text-center">Identificación: {usuarionombre}</td>
+				<td class="text-center">Rol: {rolnombre}</td>
+				<td class="text-end"><a href='../../prog/menu/cerrarsesion.php'>Cerrar sesión</a></td>
+			</tr>
+		</table>
+		<div class="row">
+			<div class="col">
+				<h1>Confirmar para borrar esta Cátedra de {programanombre}</h1>
+				<a href='{rutaprog}terminar.php?op=1&catedra={catedra}' class='btn btn-danger float-end'>Borrar (no se podrá deshacer)</a>
+				<table class="table table-striped table-bordered table-hover table-sm">
+					<thead>
+						<tr><th class="col-md-2">Atributo</th><th>Valor</th></tr>
+					</thead>
+					<tr><td>Periodo</td><td>{periodo}</td></tr>
+					<tr><td>Área de Conocimiento</td><td>{areaconocimiento}</td></tr>
+					<tr><td>Ciclo de formación</td><td>{cicloformacion}</td></tr>
+					<tr><td>Componente de formación</td><td>{componenteformacion}</td></tr>
+					<tr><td>Nombre</td><td>{nombre}</td></tr>
+					<tr><td>Código</td><td>{codigouniversidad}</td></tr>
+					<tr><td>Semestre</td><td>{semestre}</td></tr>
+					<tr><td>Nivel de formación</td><td>{nivelformacion}</td></tr>
+					<tr><td>Horas de dedicación del docente</td><td>{horasdocente}</td></tr>
+					<tr><td>Horas de dedicación independiente</td><td>{horasindependiente}</td></tr>
+					<tr><td>Créditos</td><td>{creditos}</td></tr>
+					<tr><td>Modalidad</td><td>{modalidad}</td></tr>
+					<tr><td>Tipo</td><td>{tipo}</td></tr>
+					<tr><td>Docente</td><td>{docente}</td></tr>
+					<tr><td>Editable</td><td>{editar}</td></tr>
+					<tr><td>Competencias</td><td>{competencias}</td></tr>
+					<tr><td>Resultados</td><td>{resultados}</td></tr>
+				</table>
+			</div>
+		</div>
+		<br><br>
+		<div class="row">
+			<div class="col">
+				<nav>
+					<ul class="pagination">
+						<li class="page-item"><a href="{rutaprog}registros.php" class="page-link">&larr; Retornar</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</body></html>
