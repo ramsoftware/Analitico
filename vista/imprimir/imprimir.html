@@ -1,0 +1,125 @@
+<!DOCTYPE HTML><html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+	<script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
+	<title>[Vikingo] Cátedras</title>
+</head>
+<body>
+	<div class="container-fluid">
+		<table id="comun" class="table table-striped table-sm">
+			<tr>
+				<td colspan="4" class="text-center">[Vikingo] Software para administrar los programas analíticos y hacerles su seguimiento</td>
+			</tr>
+			<tr>
+				<td><a href="../../prog/menu/docente.php">Menú principal</a></td>
+				<td class="text-center">Identificación: {usuarionombre}</td>
+				<td class="text-center">Rol: {rolnombre}</td>
+				<td class="text-end"><a href='../../prog/menu/cerrarsesion.php'>Cerrar sesión</a></td>
+			</tr>
+		</table>
+		<div class="row">
+			<div class="col">
+				<h1>{nombre}</h1>
+				<table id="table1" class="table table-striped table-bordered table-hover table-sm" >
+					<tr><td>Facultad</td><td>{facultad}</td></tr>
+					<tr><td>Programa</td><td>{programa}</td></tr>
+					<tr><td>Área de Conocimiento</td><td>{areaconocimiento}</td></tr>
+					<tr><td>Ciclo de formación</td><td>{cicloformacion}</td></tr>
+					<tr><td>Componente de formación</td><td>{componenteformacion}</td></tr>
+				</table><br>
+
+				<h3>1. INFORMACIÓN GENERAL DEL CURSO</h3>
+				<table id="table2" class="table table-striped table-bordered table-hover table-sm" >
+					<tr><td>Nombre de la asignatura o módulo</td><td>{nombre}</td></tr>
+					<tr><td>Código</td><td>{codigouniversidad}</td></tr>
+					<tr><td>Semestre</td><td>{semestre}</td></tr>
+					<tr><td>Nivel de formación</td><td>{nivelformacion}</td></tr>
+					<tr><td>Horas con acompañamiento directo del docente</td><td>{horasdocente}</td></tr>
+					<tr><td>Horas de trabajo independiente</td><td>{horasindependiente}</td></tr>
+					<tr><td>Número de créditos académicos</td><td>{creditos}</td></tr>
+					<tr><td>Modalidad</td><td>{modalidad}</td></tr>
+					<tr><td>Tipo de asignatura</td><td>{tipo}</td></tr>
+					<tr><td>Período</td><td>{periodo}</td></tr>
+				</table><br>
+
+				<h3>2. CARACTERIZACION DEL CURSO</h3>
+				<h4>2.1 Descripción</h4><p>{descripcion}</p>
+				<h4>2.2 Justificación</h4><p>{justificacion}</p><br>
+
+				<h3>3. RESULTADOS DE APRENDIZAJE Y COMPETENCIAS</h3>
+				<table id="resultado" class="table table-striped table-bordered table-hover table-sm" >
+					<thead>
+					<tr>
+						<th>Resultados</th>
+					</tr>
+					</thead>
+					{resultados}
+				</table><br>
+
+				<table id="competencia" class="table table-striped table-bordered table-hover table-sm" >
+					<thead>
+					<tr>
+						<th>Competencias</th>
+					</tr>
+					</thead>
+					{competencias}
+				</table><br>
+
+				<h3>4. METODOLOGIA</h3><p>{metodologia}</p><br>
+
+				<h3>5. CONTENIDOS (UNIDADES Y TEMAS)</h3><p>{unidades}</p><br>
+
+				<h3>6. PROGRAMACIÓN</h3>
+				<table id="programacion" class="table table-striped table-bordered table-hover table-sm" >
+					<thead>
+					<tr>
+						<th>Número</th>
+						<th>Descripción</th>
+						<th>Actividad presencial</th>
+						<th>Horas presencial</th>
+						<th>Actividad Independiente</th>
+						<th>Horas independiente</th>
+						<th>Unidades estudiadas</th>
+						<th>Resultados de aprendizaje</th>
+					</tr>
+					</thead>
+					{programacion}
+				</table><br>
+
+				<h3>7. EVALUACIÓN</h3>
+				<table id="evaluaciones" class="table table-striped table-bordered table-hover table-sm" >
+					<thead>
+					<tr>
+						<th>Descripción</th>
+						<th>Unidades a evaluar</th>
+						<th>Resultados de aprendizaje</th>
+						<th>Estrategias de evaluación</th>
+						<th>Momento</th>
+					</tr>
+					</thead>
+					{evaluaciones}
+				</table><br>
+				
+				<h3>8. FUENTES DE INFORMACIÓN</h3>
+				<table id="documentos" class="table table-striped table-bordered table-hover table-sm" >
+					<tr><td>{documentos}</td></tr>
+				</table><br>
+
+				<h3>9. DOCENTE</h3>
+				<table id="docente" class="table table-striped table-bordered table-hover table-sm" >
+					<tr><td>Nombre</td><td>{nombredocente}</td></tr>
+					<tr><td>Correo electrónico</td><td>{correo}</td></tr>
+					<tr><td>Experiencia docente</td><td>{experienciadocente}</td></tr>
+					<tr><td>Experiencia profesional</td><td>{experienciaprofesional}</td></tr>
+					<tr><td>Experiencia en investigación</td><td>{experienciainvestigacion}</td></tr>
+					<tr><td>Producción Académica y Profesional </td><td>{produccion}</td></tr>
+				</table>
+			</div>
+		</div>
+		<ul class="pagination">
+			<li class="page-item"><a href="../../prog/catedraseditadocente/menuedita.php?catedra={catedra}" class="page-link">&larr; Volver</a></li>
+		</ul>
+	</div>
+</body></html>

@@ -1,0 +1,62 @@
+<!DOCTYPE HTML><html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+	<script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../chart.min.js"></script>
+	<title>[Vikingo] Número de documentos por idioma</title>
+</head>
+<body>
+	<div class="container-fluid">
+		<table id="comun" class="table table-striped table-sm">
+			<tr>
+				<td colspan="4" class="text-center">[Vikingo] Software para administrar los programas analíticos y hacerles su seguimiento</td>
+			</tr>
+			<tr>
+				<td><a href="../../prog/menu/docente.php">Menú principal</a></td>
+				<td class="text-center">Identificación: {usuarionombre}</td>
+				<td class="text-center">Rol: {rolnombre}</td>
+				<td class="text-end"><a href='../../prog/menu/cerrarsesion.php'>Cerrar sesión</a></td>
+			</tr>
+		</table>
+		<div class="row">
+			<div class="col">
+				<h1>Número de documentos por idioma</h1>
+				<br><br>
+				<table class="table table-striped table-bordered table-hover table-sm">
+					<thead>
+						<th>Idioma</th><th>Cantidad</th><th>Porcentaje</th>
+					</thead>
+					{Datos}
+				</table>
+			</div>
+			<div>
+				<canvas id="canvas" width="500" height="500" ></canvas>
+                <script>
+var lienzo = document.getElementById('canvas');
+
+var grafico = new Chart(lienzo, {
+	type: 'pie',
+	data: {
+		labels: [{etiquetaspastel}],
+		datasets: [{
+			label: 'Idiomas',
+			data: [{valorespastel}],
+            backgroundColor: ["#ff0000", "#ff8000", "#ffbf00", "#ffff00", "#bfff00", "#00ffff", "#00bfff", "#8000ff", "#ff00ff", "#ff0040", "#80ff00", "#0080ff", "#ff00bf"],
+			borderWidth: 1
+		}]
+	},
+	options: {
+		responsive: true,
+        maintainAspectRatio: false
+	}
+});
+                </script>
+			</div>
+		</div>
+		<ul class="pagination">
+			<li class="page-item"><a href="../../prog/menu/informesdocente.php" class="page-link">&larr; Volver</a></li>
+		</ul>
+	</div>
+</body></html>

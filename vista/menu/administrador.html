@@ -1,0 +1,36 @@
+<!DOCTYPE HTML><html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+	<script src="../../jquery-3.7.0.min.js"></script>
+	<script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
+	<title>[Vikingo] Usuario Administrador</title>
+</head>
+<body>
+	<div class="container-fluid">
+		<table id="comun" class="table table-striped table-sm">
+			<tr>
+				<td colspan="4" class="text-center">Vikingo - Software para administrar los programas analíticos y hacerles su seguimiento</td>
+			</tr>
+			<tr>
+				<td><a href="../../prog/menu/administrador.php">Menú principal</a></td>
+				<td class="text-center">Identificación: {usuarionombre}</td>
+				<td class="text-center">Rol: {rolnombre}</td>
+				<td class="text-end"><a href='../../prog/menu/cerrarsesion.php'>Cerrar sesión</a></td>
+			</tr>
+		</table>
+		<div class="row">
+			<div class="col">
+				<br><br>
+				<table class="table table-striped table-bordered table-hover table-sm">
+					<thead><tr><th>MENÚ PRINCIPAL</th></tr></thead>
+                    <tr><td>Gestión de administradores del software</td><td><a href='../../prog/usuarioadmin/registros.php' class="btn btn-primary">Ir</a></td></tr>
+					<tr><td>Gestión de usuario encargado de los datos básicos</td><td><a href='../../prog/usuariobasica/registros.php' class="btn btn-primary">Ir</a></td></tr>
+					<tr><td>Gestión de comités académicos</td><td><a href='../../prog/usuariocomite/registros.php' class="btn btn-primary">Ir</a></td></tr>
+					<tr><td>Gestión de docentes</td><td><a href='../../prog/usuariodocente/registros.php' class="btn btn-primary">Ir</a></td></tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</body></html>
