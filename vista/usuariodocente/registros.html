@@ -1,0 +1,44 @@
+<!DOCTYPE HTML><html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+	<script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
+	<title>[Vikingo] Docentes</title>
+</head>
+<body>
+<div class="container-fluid">
+	<table id="comun" class="table table-striped table-sm">
+		<tr>
+			<td colspan="4" class="text-center">[Vikingo] Software para administrar los programas analíticos y hacerles su seguimiento</td>
+		</tr>
+		<tr>
+			<td><a href="../../prog/menu/administrador.php">Menú principal</a></td>
+			<td class="text-center">Identificación: {usuarionombre}</td>
+			<td class="text-center">Rol: {rolnombre}</td>
+			<td class="text-end"><a href='../../prog/menu/cerrarsesion.php'>Cerrar sesión</a></td>
+		</tr>
+	</table>
+
+	<h1>Docentes</h1>
+	<a href="{rutaprog}iniciar.php?op=3" class="btn btn-success" style="margin-right: 10px;">Adicionar</a>
+	<a href="{rutaprog}iniciar.php?op=4" class="btn btn-info" style="margin-right: 10px;">Buscar</a>
+	<a href="registros.php?PosTabla=0" class="btn btn-secondary" style="margin-right: 10px;">Inicio</a>
+	<a href="registros.php?PosTabla={anterior}" class="btn btn-secondary" style="margin-right: 10px;">&larr; Anterior</a>
+	<a href="registros.php?PosTabla={siguiente}" class="btn btn-secondary" style="margin-right: 10px;" >Siguiente &rarr;</a>
+	<br><br>
+	<table id="table" class="table table-striped table-bordered table-hover table-sm" >
+		<thead>
+		<tr>
+			<th class='col-md-auto'>Identifica</th>
+			<th class='col-md-auto'>Nombre</th>
+			<th class='col-md-auto'>Correo 1</th>
+			<th class='col-md-auto'>Correo 2</th>
+			<th class='col-md-auto'>Acción</th>
+		</tr>
+		</thead>
+		{Datos}
+	</table>
+</div>
+</body>
+</html>
