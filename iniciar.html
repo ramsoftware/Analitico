@@ -1,0 +1,26 @@
+<!DOCTYPE HTML><html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<script src="jquery-3.7.0.min.js"></script>
+	<script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+	<title>[Vikingo] Programas Analíticos</title>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col">
+				<h2>[Vikingo]. Software para administrar los programas analíticos y hacerles su seguimiento. Versión: 24-julio-2024</h2>
+				<br>
+				<h4>Iniciar sesión</h4>
+				<form action="./prog/menu/menu.php" method="post">
+					<label for="identifica">Identificación</label><input type="text" class="form-control" name="identifica" id="identifica" required />
+					<label for="contrasena">Contraseña</label><input type="password" class="form-control" name="contrasena" id="contrasena" required />
+					<br><button class="btn btn-primary" type="submit">Iniciar</button>
+				</form>
+				<p class="text-danger">{FallaInicio}</p>
+			</div>
+		</div>
+	</div>
+</body></html>
